@@ -24,8 +24,25 @@
 
 ---
 
+## Risk Assessment
+
+| Risk Category | Assessment |
+|--------------|------------|
+| Financial Accuracy | Low |
+| Operational Disruption | Low |
+| Audit Readiness | Moderate |
+| Reputational Exposure | Low |
+
+---
+
 ## Summary
 
 The impact was **correctness-related**, not availability-related.
 Accuracy and trust — not uptime — were the primary concerns.
+
+## Conclusion
+
+While impact was limited, the incident revealed
+a control gap that could have led to material risk
+if not addressed.
 
