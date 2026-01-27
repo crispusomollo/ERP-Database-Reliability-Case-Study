@@ -1,0 +1,22 @@
+/* ============================================================
+   PostgreSQL Pre-Deploy Enforcement
+   Purpose:
+   Ensure new constraints will not fail
+   ============================================================ */
+
+-- Must return zero rows before enabling constraints
+SELECT asset_id
+FROM asset_assignments
+WHERE return_date IS NULL
+GROUP BY asset_id
+HAVING COUNT(*) > 1;
+
+SELECT t.id
+FROM timesheets t
+LEFT JOIN approvals a
+  ON a.reference_type = 'TIMESHEET'
+ AND a.reference_id = t.id
+ AND a.approval_status = 'APPROVED'
+WHERE t.status = 'APPROVED'
+  AND a.id IS NULL;
+
