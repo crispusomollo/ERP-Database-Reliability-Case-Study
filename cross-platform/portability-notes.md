@@ -88,6 +88,21 @@ Different engines optimize for different workloads and design philosophies:
 Choosing the right enforcement mechanism ensures correctness without
 introducing unnecessary complexity or performance penalties.
 
+## Migration Principles
+
+- Business rules are engine-agnostic
+- Enforcement adapts per engine
+- Detection logic remains consistent
+- Recovery logic is engine-aware
+
+## Migration Checklist
+
+- Validate prevention constraints
+- Run detection queries
+- Apply engine-specific enforcement
+- Enable automation
+- Re-baseline metrics
+
 ## Operational Implications
 
 - Integrity rules are enforced as close to the data as possible
