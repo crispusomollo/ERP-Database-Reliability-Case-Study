@@ -107,3 +107,4 @@ Design databases assuming applications will fail — and make recovery predictab
 
 All schemas, data, and scenarios are anonymized and simplified.
 
+
